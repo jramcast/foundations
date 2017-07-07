@@ -1,12 +1,18 @@
 #include <string>
 
+using namespace std;
+
 class LinkedList {
 
     public:
-        int item;
+        string item;
         LinkedList* next = NULL;
 
-        void insert(int item);
-        LinkedList* search(int item);
-        void print();
-}; 
+        void        insert(string item);
+        void        remove(string item);
+        LinkedList* search(string item);
+        void        print();
+
+    private:
+        LinkedList* getPredecesorList(string item);
+};
