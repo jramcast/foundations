@@ -5,13 +5,15 @@ using namespace std;
 class BinarySearchTree {
 
     public:
-        string item;
+        int item;
+        bool empty = true;
         BinarySearchTree* parent = NULL;
         BinarySearchTree* left = NULL;
         BinarySearchTree* right = NULL;
 
-        void   insert(string item, BinarySearchTree* parent);
-        BinarySearchTree*   search(string item);
+        void   insert(int item, BinarySearchTree* parent);
+        void   remove(int item);
+        BinarySearchTree*   search(int item);
         BinarySearchTree*   findMin();
         BinarySearchTree*   findMax();
         void                print();
